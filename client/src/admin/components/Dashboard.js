@@ -11,21 +11,6 @@ import ProductTable from '../components/ProductTable';
 
 import Theme from '../../constants/Theme';
 
-import {
-  getFilters,
-  createFilter,
-} from '../../redux/adminStore/slices/filtersSlice';
-
-import {
-  getProducts,
-  createProduct,
-  patchProduct,
-  deleteProduct,
-} 
-
-from '../../redux/adminStore/slices/productsSlice';
-
-
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -34,6 +19,7 @@ const Dashboard = () => {
 
 
   // PRODUCTS
+
   // create button
   const [productButton, setProductButton] = useState(false);
   const createProductClicked = () => {
@@ -42,13 +28,12 @@ const Dashboard = () => {
 
   // API 
   const onCreateProduct = (product) => {
-    
-  // create
+  
     dispatch(createProduct(product));
   };
 
 
-  // PRODUCT TABLE 
+  // TABLE 
   const onProductAction = (props) => {
     const { type, product } = props;
     switch (type.toString().toLowerCase()) {
@@ -63,7 +48,7 @@ const Dashboard = () => {
         break;
       case 'status':
         
-  // change status
+  // status
         let prod = { ...product };
         prod['productStatus'] =
           prod['productStatus'].toString().toLowerCase() === 'active'

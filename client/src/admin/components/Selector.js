@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Box,
-  FormControl,
-  MenuItem,
-  Select,
-  InputLabel,
-  FormHelperText,
-} 
+import { Box,FormControl,MenuItem,Select,InputLabel,FormHelperText} 
 from 'react/material';
 
 const Selector = (props) => {

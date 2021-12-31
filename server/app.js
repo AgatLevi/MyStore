@@ -7,7 +7,7 @@ const globalErrorHandler = require('./controllers/errorController');
 const adminRouter = require('./routes/adminRoutes');
 
 
-// STATIC PAGES
+// STATIC
 app.use(express.static(`${__dirname}/public`));
 
 
@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 
 
 // ROUTES 
-// ADMIN [filters, products]
+// admin [filters, products]
 app.use('/admin/', adminRouter);
 
 

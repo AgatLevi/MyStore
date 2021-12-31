@@ -3,14 +3,16 @@ import { Box, Grid, Button, Alert } from 'react/material';
 import Input from './Input';
 import Selector from './Selector';
 
-// CammelCase Helper
+
 const camelCase = (str) => {
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+
 };
 
 //REDUCE
 const FORM_UPDATE = 'FORM_UPDATE';
 const formReducer = (state, action) => {
+  
   if (action.type === FORM_UPDATE) {
     let formState = state;
     let id = action.id;
@@ -22,14 +24,17 @@ const formReducer = (state, action) => {
       // formState
       formState['productFilters'] = filters;
       console.log(filters);
-    } else {
+    } 
+    else 
+    {
       formState[id] = value;
     }
 
     switch (id) {
       case 'productCost':
       case 'productInventory':
-        if (!value || value === '') {
+        if (!value || value === '') 
+        {
           formState[id] = id === 'productInventory' ? 1 : 0;
         }
         break;
@@ -43,7 +48,7 @@ const formReducer = (state, action) => {
         filterVariant: value,
       });
 
-      // remove existing filter of the same Type
+      // remove filter of the same Type
       let filters = formState['productFilters'].filter(
         (item) => item.filterType !== type
       );
@@ -74,7 +79,7 @@ const formReducer = (state, action) => {
 const ProductAdd = (props) => {
   const { filters, onCreateProduct, alert } = props;
 
-  //UPADTE INPUT
+  //UPADTE 
   const onInputUpdate = useCallback(
     (id, value) => {
       dispatchFormState({
@@ -87,7 +92,7 @@ const ProductAdd = (props) => {
     [dispatchFormState, setShowAlert]
   );
 
-  //INPUTS CALLBACK
+  // CALLBACK
   const onInputChange = (event) => {
     let id = event.target.id;
     let value = event.target.value;
@@ -112,6 +117,7 @@ const ProductAdd = (props) => {
     setShowAlert(alert);
   }, [alert]);
 
+  
   // SUBMIT HANDLER
   const onSubmitClicked = () => {
     if (formState.formIsValid && onCreateProduct) {

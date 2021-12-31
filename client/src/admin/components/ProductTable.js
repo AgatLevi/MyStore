@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 import Box from 'react/material/Box';
 import Collapse from 'react/material/Collapse';
 import IconButton from 'react/material/IconButton';
@@ -219,7 +218,7 @@ const { data, onProductAction } = props;
     setPage(0);
   };
 
-  // ROW CALLBACK
+  // CALLBACK
   const onAction = (props) => {
     onProductAction && onProductAction(props);
   };
@@ -237,7 +236,6 @@ const { data, onProductAction } = props;
               <TableCell align="center">Cost</TableCell>
               <TableCell align="center">Statue</TableCell>
               <TableCell align="center">Modified</TableCell>
-              <TableCell align="center">Actions</TableCell>
           
           </TableRow>
           </TableHead>

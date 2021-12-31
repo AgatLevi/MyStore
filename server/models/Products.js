@@ -62,7 +62,6 @@ const productSchema = mongoose.Schema(
 
 
 // Document MiddleWare
-
 productSchema.pre('save', function (next) {
   console.log('DO BEFORE CREATING');
 
@@ -79,7 +78,7 @@ productSchema.post('save', function (doc, next) {
 productSchema.pre(['find', 'findOne'], function (next) {
 
   this.curtime = Date.now();
-  console.log('>>> STARTED AT ', this.curtime);
+  console.log(' STARTED AT ', this.curtime);
   next();
 });
 

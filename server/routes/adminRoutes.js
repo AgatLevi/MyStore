@@ -5,7 +5,6 @@ const filtersController = require('../controllers/filtersController');
 const productsController = require('../controllers/productsController');
 
 // products
-
 router.route('/products').post(productsController.createProduct);
 
 router
@@ -16,7 +15,6 @@ router
 
 
 // filters
-
 router
   .route('/filters')
   .get(filtersController.loadFilters)

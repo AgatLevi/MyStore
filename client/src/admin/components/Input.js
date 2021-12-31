@@ -3,11 +3,9 @@ import { FormControl, TextField, InputAdornment } from 'react/material';
 
 
 const Input = (props) => {
-  // props
   const { id, label, inputType, defaultValue, required, camelCased, onChange } =
     props;
 
-  // Input
   const [text, setText] = useState({
     value: defaultValue || '',
     error: required && !defaultValue ? '* required' : null,

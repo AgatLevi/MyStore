@@ -21,7 +21,6 @@ async function getAllProducts() {
     // product by category
    
             var product = products[index];
-        
             var productID = product.id;
             var productName = product.name;
             var productColor = product.color;
@@ -49,11 +48,10 @@ async function getAllProducts() {
             cards.push(card);
         }
   
-
     return cards;
 
-    // create new product
 
+    // create new product
     async function createNewProduct(product) {
     var result = false;
 
@@ -63,7 +61,7 @@ async function getAllProducts() {
         body: JSON.stringify(product),
         headers: {
             'Content-Type': 'json'
-        }
+    }
     })
     .then(_ => result = true)
     .catch(_ => result = false);
@@ -82,7 +80,7 @@ async function updateProduct(id, product) {
         body: JSON.stringify(product),
         headers: {
             'Content-Type': 'json'
-        }
+    }
     })
     .then(_ => result = true)
     .catch(_ => result = false);

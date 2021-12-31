@@ -1,7 +1,6 @@
 {
-  "name": "agat-calc",
+  "name": "agat-store",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
@@ -20,5 +19,14 @@
   },
   "devDependencies": {
     "react-router-dom": "^6.2.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AgatLevi/MyStore.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AgatLevi/MyStore/issues"
+  },
+  "homepage": "https://github.com/AgatLevi/MyStore#readme",
+  "description": ""
 }

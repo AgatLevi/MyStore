@@ -21,7 +21,6 @@ const DataTable = ({ data }) => {
       { id: 'id', Name: 'id', minWidth: 150 },
       { id: 'productName', Name: 'Name', minWidth: 150 },
       { id: 'productCost', Name: 'Cost', minWidth: 150 },
-      { id: 'productInventory', Name: 'Inventory', minWidth: 150 },
       { id: 'productStatus', Name: 'Status', minWidth: 150 },
       { id: 'productModified', Name: 'Modified', minWidth: 150 },
     ];

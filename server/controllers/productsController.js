@@ -3,6 +3,7 @@ const APIFeatures = require('../utils/apiFeatures');
 const AppError = require('../utils/appError');
 const catchAsync = require('../utils/catchAsync');
 
+
 //route
 exports.createProduct = catchAsync(async (req, res) => {
   console.log(' ADMIN/CREATE:PRODUCT ');
@@ -14,6 +15,7 @@ exports.createProduct = catchAsync(async (req, res) => {
     });
   });
 });
+
 
 exports.getProducts = catchAsync(async (req, res, next) => {
   let log = req.params.id
@@ -30,11 +32,13 @@ exports.getProducts = catchAsync(async (req, res, next) => {
     apiFeatures.filter().sort().limitFields().paginate();
   }
 
-  await (singleProductID
+  await 
+  (singleProductID
     ? Product.findById(singleProductID) // get product by product ID
     : apiFeatures.query
 
-  ).then((doc) => {
+  ).
+  then((doc) => {
     doc
       ? res.status(200).json({
           status: 'success',
